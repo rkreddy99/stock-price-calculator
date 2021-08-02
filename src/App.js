@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import happy from "./images/happy.jpg"
 
 function App() {
   const [purchase, setPurchase] = useState("")
@@ -26,7 +25,7 @@ function App() {
     <div className="App">
       <header
         style={
-          changepercent > 50 ? {backgroundColor: "rgb(0, 128, 0)"} : 
+          changepercent > 50 ? {backgroundColor: "rgb(0, 128, 0)"} :
           changepercent < -50 ? {backgroundColor: "rgb(128, 0, 0)"} : {backgroundColor: "rgb(0, 0, 128)"}
       }
       >
@@ -37,11 +36,11 @@ function App() {
       </header>
 
       <div className="container">
-        <div 
+        <div
           className="card"
           style={
-            changepercent > 50 ? {backgroundColor: "palegreen", boxShadow: `2px 2px 40px ${shadowgreen}`} : 
-            changepercent < -50 ? {backgroundColor: "#fb9898", boxShadow: `2px 2px 40px ${shadowred}`} : 
+            changepercent > 50 ? {backgroundColor: "palegreen", boxShadow: `2px 2px 40px ${shadowgreen}`} :
+            changepercent < -50 ? {backgroundColor: "#fb9898", boxShadow: `2px 2px 40px ${shadowred}`} :
             {backgroundColor: "#9afdfd", boxShadow: `2px 2px 40px ${shadowblue}`}
           }
         >
@@ -81,13 +80,13 @@ function App() {
             <br/>
             <button type="submit">Check</button>
           </form>
-          { msg !== "" && 
+          { msg !== "" &&
             <div className="output">
               <p>{msg}</p>
             </div>
           }
         </div>
-      </div> 
+      </div>
     </div>
   );
 }

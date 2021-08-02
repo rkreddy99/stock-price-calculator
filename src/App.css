@@ -1,38 +1,122 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --dark-red: rgb(128, 0, 0);
+  --pale-red: #fb9898;
+  --dark-green: rgb(0, 128, 0);
+  --pale-green: palegreen;
+  --dark-blue: rgb(0, 0, 128);
+  --pale-blue: #9afdfd;
+  --shadow-green: rgb(148, 255, 148);
+  --shadow-red: rgb(255, 148, 148);
+  --shadow-blue: rgb(148, 148, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: relative;
+  height: 300px;
+  width: 100vw;
+  max-width: 100%;
+  background-color: var(--dark-blue);
+  padding-bottom: 20px;
+  z-index: -1;
+  font-family: inherit;
+}
+
+h1 {
+  padding: 50px 0;
+  font: 40px "Arial";
   text-align: center;
+  font-family: inherit;
+  margin: 5px;
+  margin-top: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* set height to pixels if you want angle to change with screen width */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -8rem;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #a0ffff;
+  width: 25rem;
+  max-width: 80vw;
+  height: 25rem;
+  box-shadow: 2px 2px 40px var(--shadow-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+input {
+  /* border: 2px double v; */
+  border-radius: 25px;
+  width: 10rem;
+  max-width: 90%;
+  background-color: beige;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-family: inherit;
+  max-width: 95%;
+  outline: none;
+  text-align: center;
+  border: 2px solid black;
+}
+
+span {
+  font-weight: 500;
+}
+
+button {
+  border: 2px solid black;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: black;
+  font-weight: 700;
+  background-color: bisque;
+  border-radius: 25px;
+  padding: 0.5rem;
+  width: 5rem;
+  cursor: pointer;
+  font-family: inherit;
+  max-width: 95%;
+}
+
+.output {
+  font-weight: 700;
+  padding: 0 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

@@ -16,9 +16,10 @@ function App() {
     event.preventDefault();
     let pnl = (current - purchase)*stocks;
     let change = (current - purchase)*100/purchase;
+    change = Number((change).toFixed(2));
     setChangePercent(change);
     pnl > 0 ? setMsg(`Yay!!! Your stocks shot up by ${change}%⬆ and you made a profit of ₹${pnl} 🥳`) :
-    pnl < 0 ? setMsg(`Oops!!! Your stocks fell down by ${change}%⬇ and you made a loss of ₹${Math.abs(pnl)} 😔`) : setMsg("Didn't lose or gain 😐")
+    pnl < 0 ? setMsg(`Oops!!! Your stocks fell down by ${Math.abs(change)}%⬇ and you made a loss of ₹${Math.abs(pnl)} 😔`) : setMsg("Didn't lose or gain 😐")
   }
 
   return (
@@ -48,7 +49,7 @@ function App() {
             <span>Purchase Price : </span>
             <input
               type="number"
-              placeholder="price of stock then"
+              placeholder="Enter cost price"
               onChange={(event) => setPurchase(event.target.value)}
               value={purchase}
               min="0.001"
@@ -59,7 +60,7 @@ function App() {
             <span>Stock Quantity : </span>
             <input
               type="number"
-              placeholder="no of stocks bought"
+              placeholder="Enter quantity bought"
               onChange={(event) => setStocks(event.target.value)}
               value={stocks}
               min="0.001"
@@ -70,7 +71,7 @@ function App() {
             <span>Current Price : </span>
             <input
               type="number"
-              placeholder="curr price of stock"
+              placeholder="Enter current price"
               onChange={(event) => setCurrent(event.target.value)}
               value={current}
               min="0.001"

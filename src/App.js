@@ -17,6 +17,7 @@ function App() {
     let pnl = (current - purchase)*stocks;
     let change = (current - purchase)*100/purchase;
     change = Number((change).toFixed(2));
+    pnl = Number((pnl).toFixed(2));
     setChangePercent(change);
     pnl > 0 ? setMsg(`Yay!!! Your stocks shot up by ${change}%⬆ and you made a profit of ₹${pnl} 🥳`) :
     pnl < 0 ? setMsg(`Oops!!! Your stocks fell down by ${Math.abs(change)}%⬇ and you made a loss of ₹${Math.abs(pnl)} 😔`) : setMsg("Didn't lose or gain 😐")
